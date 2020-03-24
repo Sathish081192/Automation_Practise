@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: runners.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 26, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 102.381 s <<< FAILURE! - in runners.TestRunner
+Then Order Confirmation Page should be displayed and Order details should present in OrderHistory Page(Scenario: Order Tshirts)  Time elapsed: 0.029 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...y Store is complete.[1]> but was:<...y Store is complete.[]>
+
+Scenario: Order Tshirts  Time elapsed: 0.029 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...y Store is complete.[1]> but was:<...y Store is complete.[]>
+
