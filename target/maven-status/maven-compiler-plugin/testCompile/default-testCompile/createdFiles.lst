@@ -1,3 +1,9 @@
-runners\TestRunner.class
+utils\UserCreationinFacebook.class
+utils\AlertHandling.class
 utils\CommonActions.class
 stepDefinition\OrderOnline.class
+utils\DynamicWebTable.class
+utils\FrameHandling.class
+runners\TestRunner.class
+utils\DBValidation.class
+utils\uitest.class

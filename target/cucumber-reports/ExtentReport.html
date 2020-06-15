@@ -39,6 +39,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -52,7 +53,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Mar 24, 2020 06:15:53 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Jun 15, 2020 06:13:28 PM</span>
 				</a>
 			</li>
 			<li>
@@ -78,6 +79,8 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -139,10 +142,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -154,10 +157,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -169,10 +172,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>24</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='91.667%'><span class='strong'>22</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='4.167%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='4.167%'>1</span> others
 				</div>
 			</div>
 		</div>
@@ -186,18 +189,18 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Order Item and User Modification</span>
-						<span class='test-time'>Mar 24, 2020 06:15:53 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Jun 15, 2020 06:13:29 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
 		<span class='category label white-text'>@OrderTshirt</span>
 	</div>
-	<span class='duration right label'>0h 1m 4s+986ms</span>
+	<span class='duration right label'>0h 1m 8s+542ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Order Tshirts</span>
@@ -325,11 +328,11 @@
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='18' status='pass'>
+<div class='scenario node' test-id='18' status='fail'>
 	<div class='category-list'>
 		<span class='category label white-text'>@UpdateFirstNameOfUser</span>
 	</div>
-	<span class='duration right label'>0h 0m 41s+5ms</span>
+	<span class='duration right label'>0h 0m 29s+242ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Modify the FirstName of User</span>
@@ -391,20 +394,28 @@
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='26' class='node and pass' status='pass'>
+		<li test-id='26' class='node and fail' status='fail'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And Modified FirstName should updated in Right Top Corner of WebPage</span>
-				<div class='pre'>passed</div>
+				<div class='pre'><textarea>org.junit.ComparisonFailure: expected:<exosuls[test]> but was:<exosuls[]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at stepDefinition.OrderOnline.modified_FirstName_should_updated_in_Right_Top_Corner_of_WebPage(OrderOnline.java:258)
+	at ✽.And Modified FirstName should updated in Right Top Corner of WebPage(src/test/resources/Features/OrderOnline.feature:30)
+</textarea></div>
 			
 		</li>
-		<li test-id='27' class='node and pass' status='pass'>
+		<li test-id='27' class='node and skip' status='skip'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And Modified FirstName should updated in MyPersonalInformation Page</span>
-				<div class='pre'>passed</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="target\screenshots\Modify the FirstName of User_06152020181509295.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>skipped</div>
 			
 		</li>
 	</ul>
@@ -486,7 +497,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 24, 2020 06:15:53 PM</td>
+										<td>Jun 15, 2020 06:13:29 PM</td>
 										<td class='linked' test-id='2'>Order Item and User Modification.Order Tshirts</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -499,13 +510,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@UpdateFirstNameOfUser</span>
 						<span class='category-status right'>
-							<span class='label pass'>1</span>
+							<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -520,9 +531,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 24, 2020 06:16:59 PM</td>
+										<td>Jun 15, 2020 06:14:39 PM</td>
 										<td class='linked' test-id='18'>Order Item and User Modification.Modify the FirstName of User</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -541,6 +552,72 @@
 	</div>
 </div>
 <!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>org.junit.ComparisonFailure</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Jun 15, 2020 06:15:07 PM</td>
+                                                        <td class='linked' test-id='26'>Order Item and User Modification.Modify the FirstName of User.And Modified FirstName should updated in Right Top Corner of WebPage</td>
+                                                        <td><pre><textarea>org.junit.ComparisonFailure: expected:<exosuls[test]> but was:<exosuls[]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at stepDefinition.OrderOnline.modified_FirstName_should_updated_in_Right_Top_Corner_of_WebPage(OrderOnline.java:258)
+	at ✽.And Modified FirstName should updated in Right Top Corner of WebPage(src/test/resources/Features/OrderOnline.feature:30)
+</textarea></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -568,19 +645,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 24, 2020 06:15:53 PM</div>
+					<div class='panel-lead'>Jun 15, 2020 06:13:28 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 24, 2020 06:17:41 PM</div>
+			 		<div class='panel-lead'>Jun 15, 2020 06:15:10 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>107,748ms</div>
+					<div class='panel-lead'>101,937ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -606,7 +683,7 @@
 							</tr>
 							<tr>
 								<td>Java Version</td>
-								<td>1.8.0_231</td>
+								<td>1.8.0_202</td>
 							</tr>
 							<tr>
 								<td>Environment</td>
@@ -634,8 +711,8 @@
 						</tr>
 						<tr>
 							<td>@UpdateFirstNameOfUser</td>
-							<td>1</td>
 							<td>0</td>
+							<td>1</td>
 							<td>0</td>
 						</tr>
 					</table>
@@ -651,31 +728,31 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 2,
-				failChild: 0,
+				passChild: 1,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 1,
 				
-				passGrandChild: 24,
-				failGrandChild: 0,
+				passGrandChild: 22,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 1,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 2,
 			};
 		</script>
 		

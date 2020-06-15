@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/Features/OrderOnline.feature", 
-glue = { "stepDefinition" }, 
+glue = { "stepDefinition" },
 plugin = {
 		"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/ExtentReport.html" })
 

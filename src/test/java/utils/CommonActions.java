@@ -56,7 +56,8 @@ public class CommonActions{
 	/*This method used for encrypting the password string */
 	public String encryptPassword(String decodedString) {
 		String encodedString = Base64.getEncoder().encodeToString(decodedString.getBytes());
-		return encodedString;		
+		return encodedString;	
+		
 	}
 	
 	/*This method will return the current date alone*/
@@ -86,6 +87,8 @@ public class CommonActions{
 		Date date = new Date();
 		str= dateFormat.format(date);
 		str = str.replace(" ", "").replaceAll("/", "").replaceAll(":", "");
+		
+	
 		}
 		catch(Exception e){
 
@@ -93,6 +96,10 @@ public class CommonActions{
 		return str;
 }
 	
+	public static void main(String args[]) {
+		CommonActions com=new CommonActions();
+		System.out.println(com.encryptPassword("Gowtham1!"));
+	}
 	
 	
 }
