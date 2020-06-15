@@ -17,7 +17,7 @@ public class CommonActions{
 	
 	/*This method will wait for webelement to be Visible*/
 	public void waitForWebElement(WebDriver driver,WebElement element) {
-		WebDriverWait wait=new WebDriverWait(driver, 30);
+		WebDriverWait wait=new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
